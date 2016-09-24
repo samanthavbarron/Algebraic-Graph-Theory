@@ -1,0 +1,15 @@
+We define a construction of making a product of two graphs with the same number of vertices.
+
+\begin{definition}
+    Given two graphs $G_1$ and $G_2$, and their respective Laplacians, $L_1$ and $L_2$, we have the following product as defined below.
+    
+    \begin{equation}
+        Gprod(G_1,G_2) =
+            \begin{pmatrix}
+                L_1 - I_n &   I_n \\
+                I_n         &   L_2 - I_n
+            \end{pmatrix}
+    \end{equation}
+    
+    where the entries of $Gprod(G_1,G_2)$ are in block-diagonal form.
+\end{definition}

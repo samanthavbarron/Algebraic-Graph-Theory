@@ -1,0 +1,15 @@
+We'll now define a different sort of product. Except here, we connect each vertex in a graph to every vertex of the other graph.
+
+\begin{definition}
+    Given two graphs $G_1$ and $G_2$, and their respective Laplacians, $L_1$ and $L_2$, we have the following product as defined below.
+    
+    \begin{equation}
+        G2prod(G_1,G_2) =
+            \begin{pmatrix}
+                L_1 - n I_n &   1 \\
+                1           &   L_2 - n I_n
+            \end{pmatrix}
+    \end{equation}
+    
+    where the entries of $G2prod(G_1,G_2)$ are in block-diagonal form. Here, $1$ is the matrix whose entries are all $1$.
+\end{definition}

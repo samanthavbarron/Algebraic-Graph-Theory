@@ -14,59 +14,72 @@
 %     If your article includes graphics, uncomment this command.
 \usepackage{graphicx}
 \usepackage{lipsum}
+\usepackage{listings}
+\usepackage{import}
+\usepackage[final]{pdfpages}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
 
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{xca}[theorem]{Exercise}
-
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-
-\numberwithin{equation}{section}
-
-%    Absolute value notation
-\newcommand{\abs}[1]{\lvert#1\rvert}
-
-%    Blank box placeholder for figures (to avoid requiring any
-%    particular graphics capabilities for printing this document).
-\newcommand{\blankbox}[2]{%
-  \parbox{\columnwidth}{\centering
-%    Set fboxsep to 0 so that the actual size of the box will match the
-%    given measurements more closely.
-    \setlength{\fboxsep}{0pt}%
-    \fbox{\raisebox{0pt}[#2]{\hspace{#1}}}%
-  }%
-}
+\import{./}{defns.tex}
 
 \begin{document}
 
 \title{Algebraic Graph Theory}
 
-%    Information for first author
+%    Information for second author
 \author{George Barron}
 \email{george.samuel.barron@gmail.com}
 
-%    Information for second author
-\author{Terrin Warren}
-\email{terrinwarren@gmail.com}
-
 \date{\today}
 
-\keywords{Algebraic graph theory, Graph theory, Algebra}
+\keywords{Algebraic graph theory, Graph theory, Algebra, Mathematica}
 
 \begin{abstract}
-    Abstract
+    Let $G$ be a graph and let $L$ be the Laplacian matrix of this graph. Associated with each graph is the Smith Normal Form of $L$, which we explore with computations in Mathematica. Provided are examples of said computations that lead to several conjectures, as well as a package that allows for efficient and intuitive computations.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 
-    \lipsum
+    \import{content/}{introduction.tex}
+    
+\section{Families of Graphs}
+    
+    In each of the following families of graphs, computational evidence is provided to motivate these conjectures. This data is available in the deliverables section of this report.
+    
+    \subsection{Trees}
+        \import{content/}{tree.tex}
+        
+    \subsection{Cyclic Graphs}
+        \import{content/}{cyclic.tex}
+        
+    \subsection{Complete Graphs}
+        \import{content/}{complete.tex}
+        
+    \subsection{Path Graphs}
+        \import{content/}{path.tex}
+        
+    \subsection{Grid (Lattice) Graphs}
+        \import{content/}{grid.tex}
+        
+    \subsection{Regular Graphs}
+        \import{content/}{regular.tex}
+
+\section{Graph Products}
+
+    \subsection{Gprod}
+        \import{content/}{gprod.tex}
+        
+        \import{content/}{gprodcomplete.tex}
+    
+    \subsection{G2prod}
+        \import{content/}{g2prod.tex}
+        
+        \import{content/}{g2prodcomplete.tex}
+    
+\section{Deliverables}
+
+    \import{content/}{listings.tex}
 
 \end{document}
 

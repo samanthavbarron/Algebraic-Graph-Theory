@@ -1,0 +1,179 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5487,        170]
+NotebookOptionsPosition[      5070,        151]
+NotebookOutlinePosition[      5403,        166]
+CellTagsIndexPosition[      5360,        163]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", 
+  RowBox[{"\"\<AGT`\>\"", ",", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<agt.m\>\""}], "}"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.683542300222494*^9, 3.683542303974708*^9}, {
+  3.6835426354821177`*^9, 3.683542667897007*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"num", ",", "vert", ",", "edge"}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "7", ",", "9"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"G", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomTree", "[", 
+      RowBox[{"vert", ",", "edge"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "num"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"KirchhoffMatrix", ",", "G"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6817249533287897`*^9, 3.681724985235977*^9}, {
+   3.681725065961595*^9, 3.681725067476469*^9}, {3.681725176696122*^9, 
+   3.681725179104714*^9}, {3.6817252128015413`*^9, 3.681725213244102*^9}, {
+   3.681725247085805*^9, 3.681725250187714*^9}, {3.68172528365704*^9, 
+   3.681725286505981*^9}, {3.681729462711794*^9, 3.681729465645171*^9}, 
+   3.683542287742896*^9, {3.683718673501161*^9, 3.683718684280349*^9}, {
+   3.683718911999104*^9, 3.683718924517597*^9}, {3.683719075232822*^9, 
+   3.683719079331533*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Map", "[", 
+   RowBox[{"SmithSeq", ",", "G"}], "]"}], "//", "Column"}]], "Input",
+ CellChangeTimes->{{3.6817252965442877`*^9, 3.6817253452515306`*^9}, 
+   3.681725458535187*^9, {3.681725530259327*^9, 3.681725569743099*^9}, {
+   3.6817256880595837`*^9, 3.681725688260006*^9}, 3.6835422903649054`*^9, {
+   3.683719253172763*^9, 3.683719253911903*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0"}], "}"}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.681725341792486*^9, 3.681725345478848*^9}, 
+   3.681725450164529*^9, {3.6817256887636547`*^9, 3.681725709557315*^9}, {
+   3.681725895326694*^9, 3.681725919532104*^9}, 3.681729472562883*^9, 
+   3.683542392096837*^9, 3.683542589666356*^9, 3.683542677954794*^9, 
+   3.683542708114798*^9, 3.6835436013508987`*^9, 3.6835615932858477`*^9, 
+   3.683718662792491*^9, 3.6837189266031322`*^9, {3.683719084782481*^9, 
+   3.6837191002235394`*^9}, {3.683719254425008*^9, 3.6837192740440063`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"StringJoin", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"StringDrop", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"NotebookFileName", "[", "]"}], ",", 
+        RowBox[{"-", "3"}]}], "]"}], ",", "\"\<.pdf\>\""}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"EvaluationNotebook", "[", "]"}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.683560569191132*^9, 3.683560631435261*^9}, {
+   3.683561049746863*^9, 3.6835610848927727`*^9}, 3.683561496609313*^9}]
+},
+WindowSize->{1600, 836},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 360, 9, 32, "Input"],
+Cell[921, 31, 1124, 27, 77, "Input"],
+Cell[CellGroupData[{
+Cell[2070, 62, 384, 7, 32, "Input"],
+Cell[2457, 71, 1975, 61, 192, "Output"]
+}, Open  ]],
+Cell[4447, 135, 619, 14, 143, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
